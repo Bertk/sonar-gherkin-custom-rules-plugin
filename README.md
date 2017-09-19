@@ -2,10 +2,9 @@ Sample plugin that defines SonarQube custom rules for Cucumber Gherkin feature f
 ====================================================================================
 
 ## Description
-The [SonarQube Gherkin plugin] (https://github.com/racodond/sonar-gherkin-plugin) can be enhanced by writing custom rules through a plugin using SonarQube Gherkin API. The [Gherkin sample plugin] (https://github.com/racodond/sonar-gherkin-custom-rules-plugin) was used as template for this plugin.
+The [SonarQube Gherkin plugin](https://github.com/racodond/sonar-gherkin-plugin) can be enhanced by writing custom rules through a plugin using SonarQube Gherkin API. The [Gherkin sample plugin](https://github.com/racodond/sonar-gherkin-custom-rules-plugin) was used as template for this plugin.
 This plugin adds one additional rule "allowed-composite-tag".
 
-</style>
   <table class="tg">
    <tr>
     <th class="tg-yw4l">tag</th>
