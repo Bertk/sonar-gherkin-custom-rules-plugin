@@ -1,7 +1,7 @@
 /*
- * SonarQube Cucumber Gherkin Custom Rules Plugin Example
- * Copyright (C) 2016-2016 David RACODON
- * david.racodon@gmail.com
+ * SonarQube Cucumber Gherkin Custom Rules Plugin
+ * Copyright (C) 2017-2017 Bert
+ * bert.k@hotmail.com
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -25,13 +25,13 @@ import org.sonar.api.Plugin;
 /**
  * Extension point to define a SonarQube plugin.
  */
-public class MyGherkinCustomRulesPlugin implements Plugin {
+public class TeamplayGherkinCustomRulesPlugin implements Plugin {
 
   @Override
   public void define(Context context) {
     context.addExtensions(
       ImmutableList.of(
-        MyGherkinCustomRulesDefinition.class));
+        TeamplayGherkinCustomRulesDefinition.class));
   }
 
 }

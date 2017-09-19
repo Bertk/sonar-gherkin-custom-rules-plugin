@@ -17,8 +17,32 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-@ParametersAreNonnullByDefault
 package org.sonar.gherkin.checks;
 
-import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.File;
 
+import org.junit.Test;
+import org.sonar.gherkin.checks.AllowedCompositeTagsCheck;
+import org.sonar.gherkin.checks.verifier.GherkinCheckVerifier;
+
+public class AllowedCompositeTagsCheckTest {
+
+  @Test
+  public void test_default_white_list() {
+    GherkinCheckVerifier.verify(new AllowedCompositeTagsCheck(), getTestFile("allowed-tags/allowed-tags-default.feature"));
+  }
+
+  @Test
+  public void test_composite_tags() {
+    GherkinCheckVerifier.verify(new AllowedCompositeTagsCheck(), getTestFile("allowed-tags/allowed-tags-composite.feature"));
+  }
+
+  @Test
+  public void test_composite_tfs_tag() {
+    GherkinCheckVerifier.verify(new AllowedCompositeTagsCheck(), getTestFile("allowed-tags/allowed-tfs-composite.feature"));
+  }
+
+  public static File getTestFile(String relativePath) {
+	    return new File("src/test/resources/checks/" + relativePath);
+	  }
+}

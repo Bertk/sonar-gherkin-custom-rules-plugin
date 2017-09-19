@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.sonarsource.parent</groupId>
     <artifactId>parent</artifactId>
-    <version>37</version>
+    <version>39</version>
   </parent>
 
   <groupId>com.racodond.sonarqube.plugin.gherkin</groupId>
@@ -14,13 +14,13 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>sonar-plugin</packaging>
 
-  <name>SonarQube Cucumber Gherkin Custom Rules Plugin Example</name>
-  <description>Sample plugin that defines SonarQube custom rules for Cucumber Gherkin feaure files</description>
-  <url>https://github.com/racodond/sonar-gherkin-custom-rules-plugin</url>
-  <inceptionYear>2016</inceptionYear>
+  <name>SonarQube Cucumber Gherkin Custom Rules Plugin</name>
+  <description>teamplay plugin that defines SonarQube custom rules for Cucumber Gherkin feaure files</description>
+  <url>https://github.com/Bertk/sonar-gherkin-custom-rules-plugin/</url>
+  <inceptionYear>2017</inceptionYear>
   <organization>
-    <name>David RACODON</name>
-    <url>mailto:david.racodon@gmail.com</url>
+    <name>Bert</name>
+    <url>mailto:bert.k@hotmail.com</url>
   </organization>
   <licenses>
     <license>
@@ -37,28 +37,35 @@
       <email>david.racodon@gmail.com</email>
       <url>https://www.linkedin.com/pub/david-racodon/11/62/283</url>
     </developer>
+    <developer>
+    <id>Bert</id>
+    <name>Bert</name>
+    <email>mailto:bert.k@hotmail.com</email>
+    </developer>
   </developers>
 
   <scm>
-    <connection>scm:git@github.com:racodond/sonar-gherkin-custom-rules-plugin.git</connection>
-    <developerConnection>scm:git@github.com:racodond/sonar-gherkin-custom-rules-plugin.git</developerConnection>
-    <url>https://github.com/racodond/sonar-gherkin-custom-rules-plugin.git</url>
+    <connection>scm:git@github.com:Bertk/sonar-gherkin-custom-rules-plugin.git</connection>
+    <developerConnection>scm:git@github.com:Bertk/sonar-gherkin-custom-rules-plugin.git</developerConnection>
+    <url>https://github.com/Bertk/sonar-gherkin-custom-rules-plugin.git</url>
     <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>GitHub Issues</system>
-    <url>https://github.com/racodond/sonar-gherkin-custom-rules-plugin/issues</url>
+    <url>https://github.com/Bertk/sonar-gherkin-custom-rules-plugin/issues</url>
   </issueManagement>
+<!--  
   <ciManagement>
     <system>Travis CI</system>
     <url>https://travis-ci.org/racodond/sonar-gherkin-custom-rules-plugin</url>
   </ciManagement>
-
+-->
   <properties>
-    <license.title>SonarQube Cucumber Gherkin Custom Rules Plugin Example</license.title>
-    <license.owner>David RACODON</license.owner>
-    <license.mailto>david.racodon@gmail.com</license.mailto>
-    <gherkin.version>1.0</gherkin.version>
+    <license.title>SonarQube Cucumber Gherkin Custom Rules Plugin</license.title>
+    <license.owner>Bert</license.owner>
+    <license.mailto>bert.k@hotmail.com</license.mailto>
+    <gherkin.version>1.4</gherkin.version>
+    <sonar.sources>src/main/java,src/main/resources,src/test/resources/teamplay</sonar.sources>
   </properties>
 
   <dependencies>
@@ -101,19 +108,23 @@
         <version>1.15</version>
         <extensions>true</extensions>
         <configuration>
-          <pluginClass>org.sonar.gherkin.MyGherkinCustomRulesPlugin</pluginClass>
+          <pluginClass>org.sonar.gherkin.TeamplayGherkinCustomRulesPlugin</pluginClass>
           <basePlugin>gherkin</basePlugin>
         </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
       </plugin>
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>3.2</version>
+        </plugin>      
     </plugins>
   </build>
 

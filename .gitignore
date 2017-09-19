@@ -32,3 +32,26 @@ log.txt
 *versionsBackup
 
 .sonar/
+src/test/resources/teamplay/ActivityHistory.feature
+src/test/resources/teamplay/CategorySync.feature
+src/test/resources/teamplay/CheckPrivacyLevelTagVerification.feature
+src/test/resources/teamplay/CloneRole.feature
+src/test/resources/teamplay/CompareProtocols.feature
+src/test/resources/teamplay/ContrastMediaTagVerification.feature
+src/test/resources/teamplay/CreateRole.feature
+src/test/resources/teamplay/DeleteRole.feature
+src/test/resources/teamplay/EditRole.feature
+src/test/resources/teamplay/EmptyDicomTagVerification.feature
+src/test/resources/teamplay/WithdrawAffiliation.feature
+src/test/resources/teamplay/ToggleRegulatoryDisclaimer.feature
+src/test/resources/teamplay/UploadAttachment.feature
+src/test/resources/teamplay/SplitAndMerge.feature
+src/test/resources/teamplay/RowWiseWed.feature
+src/test/resources/teamplay/RemoveModality.feature
+src/test/resources/teamplay/ProtocolsDistribution.feature
+src/test/resources/teamplay/MultiPartPNG.feature
+src/test/resources/teamplay/EnableModality.feature
+src/test/resources/teamplay/ExamDetails.feature
+src/test/resources/teamplay/FleetSync.feature
+src/test/resources/teamplay/ManageShareRecipient.feature
+src/test/resources/teamplay/ModalityDisplay.feature
