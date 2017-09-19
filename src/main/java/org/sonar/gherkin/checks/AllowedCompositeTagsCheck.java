@@ -45,7 +45,7 @@ public class AllowedCompositeTagsCheck extends DoubleDispatchVisitorCheck{
                                                                   "nonregressiontest");
   private static final Set<String> COMPOSITE_TAGS = ImmutableSet.of(
 		  "tfs:(ht|f)tp(s?)\\:\\/\\/[0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*(:(0-9)*)*(\\/?)([a-zA-Z0-9\\-\\.\\?\\,\\'\\/\\\\\\+&amp;%\\$#_]*)?", 
-		  "tc:\\d+", "us:\\d+", "wi:\\d+", "bug:\\d+", "uid:[a-zA-Z''-'\\s]{1,40}");
+		  "tc:\\d+", "us:\\d+", "wi:\\d+", "bug:\\d+", "uid:[a-zA-Z''-'\\s]{1,40}", "owner:[a-zA-Z''-'_\\s]{1,40}");
 
   @Override
   public void visitTag(TagTree tree) {

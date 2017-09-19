@@ -31,6 +31,10 @@ This plugin adds one additional rule "allowed-composite-tag".
     <td class="tg-yw4l">[a-zA-Z''-'\s]{1,40}</td>
    </tr>
    <tr>
+    <td class="tg-yw4l">owner</td>
+    <td class="tg-yw4l">[a-zA-Z''-'_\\s]{1,40}</td>
+   </tr>
+   <tr>
     <td class="tg-yw4l">tfs</td>
     <td class="tg-yw4l">(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?</td>
    </tr>
